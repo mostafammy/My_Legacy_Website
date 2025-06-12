@@ -1,6 +1,6 @@
 "use client";
 import './globals.css'
-import {Avatar, Card, CardBody, Divider} from "@heroui/react";
+import {Card, CardBody, Divider} from "@heroui/react";
 import {CardHeader} from "@heroui/card";
 import BackgroundMusic from "@/app/components/BackgroundMusic";
 import About from "@/app/components/About";
