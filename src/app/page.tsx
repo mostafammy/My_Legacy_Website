@@ -8,8 +8,22 @@ import ContactLinks from "@/app/components/ContactLinks";
 // import Timeline from "@/app/components/Timeline";
 import LegacyQuote from "@/app/components/LegacyQuote";
 import ThemeToggle from "@/app/components/ThemeToggle";
+import LoadingAnimation from "@/app/components/LoadingAnimation";
 import Image from "next/image";
+import { useEffect, useState } from 'react';
+
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate content loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Show loading for 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
       <div className="min-h-screen bg-background flex flex-col items-center p-4">
           <ThemeToggle />
@@ -32,15 +46,21 @@ export default function Home() {
                   </div>
               </CardHeader>
               <CardBody>
-                  <BackgroundMusic/>
-                  <Divider className="my-4"/>
-                  <About/>
-                  <Divider className="my-4"/>
-                  <ContactLinks/>
-                  <Divider className="my-4"/>
-                  {/*<Timeline/>*/}
-                  <Divider className="my-4"/>
-                  <LegacyQuote/>
+                  {isLoading ? (
+                    <LoadingAnimation />
+                  ) : (
+                    <>
+                      <BackgroundMusic/>
+                      <Divider className="my-4"/>
+                      <About/>
+                      <Divider className="my-4"/>
+                      <ContactLinks/>
+                      <Divider className="my-4"/>
+                      {/*<Timeline/>*/}
+                      <Divider className="my-4"/>
+                      <LegacyQuote/>
+                    </>
+                  )}
               </CardBody>
           </Card>
       </div>

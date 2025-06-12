@@ -41,14 +41,7 @@ const About: React.FC = () => {
               >
                 LinkedIn Profile
               </a>
-              <a 
-                href="https://open.spotify.com/track/1mwPnNxwCC7Tc9FBqFslun?si=52e3f9a8c0364013" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-green-400 hover:text-green-300 transition-colors"
-              >
-                Background Music
-              </a>
+
             </div>
           </div>
 
