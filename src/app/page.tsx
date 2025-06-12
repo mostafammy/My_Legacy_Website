@@ -5,7 +5,7 @@ import {CardHeader} from "@heroui/card";
 import BackgroundMusic from "@/app/components/BackgroundMusic";
 import About from "@/app/components/About";
 import ContactLinks from "@/app/components/ContactLinks";
-import Timeline from "@/app/components/Timeline";
+// import Timeline from "@/app/components/Timeline";
 import LegacyQuote from "@/app/components/LegacyQuote";
 import ThemeToggle from "@/app/components/ThemeToggle";
 import Image from "next/image";
