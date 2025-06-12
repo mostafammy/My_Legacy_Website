@@ -38,7 +38,7 @@ export default function Home() {
                   <Divider className="my-4"/>
                   <ContactLinks/>
                   <Divider className="my-4"/>
-                  <Timeline/>
+                  {/*<Timeline/>*/}
                   <Divider className="my-4"/>
                   <LegacyQuote/>
               </CardBody>
